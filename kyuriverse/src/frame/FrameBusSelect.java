@@ -12,6 +12,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import busVO.Company;
+
 public class FrameBusSelect extends JPanel {
 
 	public FrameBusSelect() {
@@ -159,6 +161,9 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon1.getText());
 				btnIcon1.setBackground(new Color(0xA38A00));
 				
+				Company naver=new Company("네이버","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(naver);
+				
 				if(btnIcon2.isBackgroundSet()) {
 					btnIcon2.setBackground(new Color(0xFFD700));
 				}
@@ -187,6 +192,10 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon2.getText());
 				btnIcon2.setBackground(new Color(0xA38A00));
+				
+				Company kakao=new Company("카카오","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(kakao);
+				
 				if(btnIcon1.isBackgroundSet()) {
 					btnIcon1.setBackground(new Color(0xFFD700));
 				}
@@ -211,6 +220,10 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon3.getText());
 				btnIcon3.setBackground(new Color(0xA38A00));
+				
+				Company ms=new Company("마소","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(ms);
+				
 				if(btnIcon2.isBackgroundSet()) {
 					btnIcon2.setBackground(new Color(0xFFD700));
 				}
@@ -236,6 +249,10 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon4.getText());
 				btnIcon4.setBackground(new Color(0xA38A00));
+				
+				Company apple=new Company("애플","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(apple);
+				
 				if(btnIcon2.isBackgroundSet()) {
 					btnIcon2.setBackground(new Color(0xFFD700));
 				}
@@ -261,6 +278,10 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon5.getText());
 				btnIcon5.setBackground(new Color(0xA38A00));
+				
+				Company IBM=new Company("IBM","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(IBM);
+				
 				if(btnIcon2.isBackgroundSet()) {
 					btnIcon2.setBackground(new Color(0xFFD700));
 				}
@@ -286,6 +307,10 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon6.getText());
 				btnIcon6.setBackground(new Color(0xA38A00));
+				
+				Company google=new Company("구글","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				new FrameCompanyInfo(google);
+				
 				if(btnIcon2.isBackgroundSet()) {
 					btnIcon2.setBackground(new Color(0xFFD700));
 				}
