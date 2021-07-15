@@ -12,10 +12,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import busVO.Company;
+import busVO.Bus;
+import busVO.CompanyDAO;
+import busVO.MyBus;
 
 public class FrameBusSelect extends JPanel {
-
 	public FrameBusSelect() {
 
 		// JPanel 구조
@@ -43,11 +44,10 @@ public class FrameBusSelect extends JPanel {
 		start.setLocation(70, 40);
 
 		TextField dest = new TextField();
-
 		dest.setBounds(0, 0, 160, 50);
 		dest.setLocation(350, 40);
 		dest.setFont(new Font("나눔고딕코딩", Font.BOLD, 19));
-
+		
 		add(start);
 		add(dest);
 
@@ -58,6 +58,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconN=new ImageIcon(chImg1);
 		
 		JButton btnIcon1 = new JButton(iconN);
+		btnIcon1.setName("네이버");
 		btnIcon1.setSize(160, 200);
 		btnIcon1.setLocation(30, 170);
 		btnIcon1.setText("네이버");
@@ -70,6 +71,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconK=new ImageIcon(chImg2);
 		
 		JButton btnIcon2 = new JButton(iconK);
+		btnIcon2.setName("카카오");
 		btnIcon2.setSize(160, 200);
 		btnIcon2.setLocation(215, 170);
 		btnIcon2.setText("카카오");
@@ -82,6 +84,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconM=new ImageIcon(chImg3);
 		
 		JButton btnIcon3 = new JButton(iconM);
+		btnIcon3.setName("마이크로소프트");
 		btnIcon3.setSize(160, 200);
 		btnIcon3.setLocation(400, 170);
 		btnIcon3.setText("마이크로소프트");
@@ -94,6 +97,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconA=new ImageIcon(chImg4);
 		
 		JButton btnIcon4 = new JButton(iconA);
+		btnIcon4.setName("애플");
 		btnIcon4.setSize(160, 200);
 		btnIcon4.setLocation(30, 395);
 		btnIcon4.setText("애플");
@@ -106,6 +110,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconI=new ImageIcon(chImg5);
 		
 		JButton btnIcon5 = new JButton(iconI);
+		btnIcon5.setName("IBM");
 		btnIcon5.setSize(160, 200);
 		btnIcon5.setLocation(215, 395);
 		btnIcon5.setText("IBM");
@@ -118,6 +123,7 @@ public class FrameBusSelect extends JPanel {
 		ImageIcon iconG=new ImageIcon(chImg6);
 		
 		JButton btnIcon6 = new JButton(iconG);
+		btnIcon6.setName("구글");
 		btnIcon6.setSize(160, 200);
 		btnIcon6.setLocation(400, 395);
 		btnIcon6.setText("구글");
@@ -160,8 +166,8 @@ public class FrameBusSelect extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				dest.setText(btnIcon1.getText());
 				btnIcon1.setBackground(new Color(0xA38A00));
-				
-				Company naver=new Company("네이버","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+
+				Bus naver=new CompanyDAO().searchCompany(btnIcon1.getText());
 				new FrameCompanyInfo(naver);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -193,7 +199,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon2.getText());
 				btnIcon2.setBackground(new Color(0xA38A00));
 				
-				Company kakao=new Company("카카오","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				Bus kakao=new CompanyDAO().searchCompany(btnIcon2.getText());
 				new FrameCompanyInfo(kakao);
 				
 				if(btnIcon1.isBackgroundSet()) {
@@ -221,7 +227,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon3.getText());
 				btnIcon3.setBackground(new Color(0xA38A00));
 				
-				Company ms=new Company("마소","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				Bus ms=new CompanyDAO().searchCompany(btnIcon3.getText());
 				new FrameCompanyInfo(ms);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -250,7 +256,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon4.getText());
 				btnIcon4.setBackground(new Color(0xA38A00));
 				
-				Company apple=new Company("애플","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				Bus apple=new CompanyDAO().searchCompany(btnIcon4.getText());
 				new FrameCompanyInfo(apple);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -279,7 +285,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon5.getText());
 				btnIcon5.setBackground(new Color(0xA38A00));
 				
-				Company IBM=new Company("IBM","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				Bus IBM=new CompanyDAO().searchCompany(btnIcon5.getText());
 				new FrameCompanyInfo(IBM);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -308,7 +314,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon6.getText());
 				btnIcon6.setBackground(new Color(0xA38A00));
 				
-				Company google=new Company("구글","경기도 성남시 분당구 불정로 6 ","ㅇㄹㅇㅇㄹㅇㄹ");
+				Bus google=new CompanyDAO().searchCompany(btnIcon6.getText());
 				new FrameCompanyInfo(google);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -352,7 +358,8 @@ public class FrameBusSelect extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 날짜 지정 페이지 추가
-				FrameBase.getInstance(new FrameDate());
+				
+				
 				
 			}
 		});

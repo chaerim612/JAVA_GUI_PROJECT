@@ -2,118 +2,64 @@ package busVO;
 
 public class Bus {
 
-	String mName; //영화 이름
-	int price; //영화 가격
-	double score; //영화 평점
-	String story; //영화 줄거리
-	String review; //영화 후기(평점+이름+한줄평)
-	
-	int total; //평점 누적합		
-	int personScore; //방금 등록한 평점
-	String rev; //한줄 평 등록
-	int personNum; //평점 등록한 사람 수
-	String reviewName = ""; //평점 등록한 사람 이름
+	String busName; //회사(목적지) 이름
+	int price; //연봉
+	String info; //회사(목적지) 정보
+	String time; //이동시간
+	String address;	//회사(목적지) 주소
 
 	//생성자
-		public Bus(String mName, int price, double score, String story,String review) {
-			//super();
-			this.mName = mName;
-			this.price = price;
-			this.total = (int)score;
-			this.story = story;
-			this.review = review;
-			this.personNum = 1;
-			setScore();
-		}
-
-		public String getmName() {
-			return mName;
-		}
-
-		public void setmName(String mName) {
-			this.mName = mName;
-		}
-
-		public int getPrice() {
-			return price;
-		}
-
-		public void setPrice(int price) {
-			this.price = price;
-		}
-
-		public double getScore() {
-			return score;
-		}
-
-		public void setScore(double score) {
-			this.score = score;
-		}
-
-		public String getStory() {
-			return story;
-		}
-
-		public void setStory(String story) {
-			this.story = story;
-		}
-
-		public String getReview() {
-			return review;
-		}
-
-		public void setReview() {
-			this.review += this.personScore + "점\t<" + this.reviewName +  ">\t" + this.rev +"\n";
-		}
-
-		public int getTotal() {
-			return total;
-		}
-
-		public void setTotal(int personN) {
-			this.total += personN;
-		}
-
-		public int getPersonScore() {
-			return personScore;
-		}
-
-		public void setPersonScore(int personScore) {
-			this.personScore = personScore;
-		}
-
-		public String getRev() {
-			return rev;
-		}
-
-		public void setRev(String rev) {
-			this.rev = rev;
-		}
-
-		public int getPersonNum() {
-			return personNum;
-		}
-
-		public void setPersonNum() {
-			this.personNum++;
-		}
-
-		public String getReviewName() {
-			return reviewName;
-		}
-
-		public void setReviewName(String reviewName) {
-			this.reviewName = reviewName;
-		}
+	public Bus() {
 		
-		public void setScore() {
-			this.score = (double)this.total / this.personNum;
+	}
+	
+	public Bus(String busName,String address,int price,String time,String info) {
+		this.busName=busName;
+		this.address=address;
+		this.price=price;
+		this.time=time;
+		this.info=info;
+		
 	}
 
-		@Override
-		public String toString() {
-			return "★영화 제목 : " + mName + 
-			"\n★가격 : " + price + "\n★평점 : " + score + 
-			"\n★최신 한줄 평 : " + review;
-		}	
+	public String getBusName() {
+		return busName;
+	}
+
+	public void setBusName(String busName) {
+		this.busName = busName;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
 }

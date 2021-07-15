@@ -211,7 +211,7 @@ public class FrameReserve extends JPanel{
 							
 						} else {
 							myM.setSeat(seatChoice[seatIndex].getText());
-							FrameBase.getInstance(new FrameMovieCounfirm(m, myM));
+							FrameBase.getInstance(new FrameBusConfirm(m, myM));
 						}
 					}
 				});//addActionListener

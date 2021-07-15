@@ -17,9 +17,9 @@ import busVO.Bus;
 import busVO.BusDAO;
 import busVO.MyBus;
 
-public class FrameMovieCounfirm extends JPanel{
+public class FrameBusConfirm extends JPanel{
 	
-	public FrameMovieCounfirm(Bus m, MyBus e) {
+	public FrameBusConfirm(Bus m, MyBus e) {
 		//JPanel 구조
 				setBackground(new Color(0xFFD700));
 				setLayout(null);

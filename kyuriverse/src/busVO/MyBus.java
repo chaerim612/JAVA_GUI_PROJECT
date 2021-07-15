@@ -1,43 +1,72 @@
 package busVO;
 
 public class MyBus {
-	// 예매정보(영화 이름, 시간대, 좌석)
-			String mName;
-			String time;
-			String seat;
+	// 예매정보(예약번호, 버스 이름, 예상 소요 시간, 좌석, 금액)
 
-			public MyBus() {
+	int bookingNum;// 예약번호
+	String busName;// 목적지이름
+	String busDate;//버스시간
+	int leadTime;// 소요시간
+	String seatNum;// 좌석번호
+	int busPrice;
 
-			}
+	public MyBus(int bookingNum, String busName, int leadTime, String seatNum, int busPrice) {
+		this.bookingNum = bookingNum;
+		this.busName = busName;
+		this.leadTime = leadTime;
+		this.seatNum = seatNum;
+		this.busPrice = busPrice;
+	}
+	public MyBus() {
+		// TODO Auto-generated constructor stub
+	}
 
-			public MyBus(String mName, String time, String seat) {
-				this.mName = mName;
-				this.time = time;
-				this.seat = seat;
-			}
+	public int getBookingNum() {
+		return bookingNum;
+	}
 
-			public String getmName() {
-				return mName;
-			}
+	public void setBookingNum() {
+		//bookingNum = (int) Math.random() * 9;
+		//this.bookingNum=bookingNum;
+		
+	} // 버튼 액션에서 setbookingNum하고 중복이면 다시 set하기.
+		//
 
-			public void setmName(String mName) {
-				this.mName = mName;
-			}
+	public String getBusName() {
+		return busName;
+	}
 
-			public String getTime() {
-				return time;
-			}
+	public void setBusName(String busName) {
+		this.busName = busName;
+	}
 
-			public void setTime(String time) {
-				this.time = time;
-			}
+	public int getLeadTime() {
+		return leadTime;
+	}
 
-			public String getSeat() {
-				return seat;
-			}
+	public void setLeadTime(int leadTime) {
+		this.leadTime = leadTime;
+	}
 
-			public void setSeat(String seat) {
-				this.seat = seat;
-			}
-				
+	public String getSeatNum() {
+		return seatNum;
+	}
+
+	public void setSeatNum(String seatNum) {
+		this.seatNum = seatNum;
+	}
+
+	public int getBusPrice() {
+		return busPrice;
+	}
+
+	public void setBusPrice(int busPrice) {
+		this.busPrice = busPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "예약번호 : "+bookingNum+"\n"+"장소"+busName;
+	}
+
 }
