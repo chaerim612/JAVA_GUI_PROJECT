@@ -9,7 +9,7 @@ public class Bus {
 	String address;	//회사(목적지) 주소
 	String busTime;//FrameDate용 매개변수 버스 출발시간
 	int busPrice;//버스가격
-	String busDate;
+	String busDate;//탑승일자
 
 	
 
