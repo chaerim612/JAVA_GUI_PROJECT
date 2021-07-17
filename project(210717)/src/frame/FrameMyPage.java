@@ -90,23 +90,21 @@ public class FrameMyPage extends JPanel {
 		//center
 		//예매번호 일단 여기서 생성했음
 		BookDAO bd = new BookDAO();
-		m.setBookingNum((int)(Math.random()*9));
-		m.toString();
-		System.out.println(m);
+		//m.setBookingNum((int)(Math.random()*9));
+		//m.toString();
+		//System.out.println(m);
 		
 		bd.addBookingNum(m);
 		
 		TextArea myPage = new TextArea("◎예  약  번  호 : " + m.getBookingNum()	+ "\n\n"
-				+"\n◎ 출   발   지 : " + startPoint
-				+"\n◎ 도   착   지 : " + m.getGoal() + "\n\n"
-				
+				+"◎ 출   발   지 : " + startPoint+ "\n\n"
+				+"◎ 도   착   지 : " + m.getGoal() + "\n\n"
 				+"◎ 예상 소요 시간 : " + b.getTime() + "\n\n"
-				
 				+"◎ 예  매  좌  석 : " + m.getSeatNum() + "\n\n"
-				+"◎ 결 제   금 액 : " + m.getBusPrice(),0,0,TextArea.SCROLLBARS_NONE);
+				+"◎ 결 제   금 액 : " + b.getBusPrice(),0,0,TextArea.SCROLLBARS_NONE);
 		myPage.setBounds(0,0, 600, 500);
 		myPage.setBackground(Color.WHITE);
-		myPage.setFont(new Font("나눔고딕코딩", Font.BOLD, 10));
+		myPage.setFont(new Font("나눔고딕코딩", Font.BOLD, 20));
 		myPage.setEditable(false);
 				
 		center.add(myPage);
@@ -154,6 +152,7 @@ public class FrameMyPage extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
 				try {
 					FileOutputStream fos = new FileOutputStream("test.txt", true);
 					

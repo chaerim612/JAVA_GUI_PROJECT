@@ -37,7 +37,7 @@ public class FrameCompanyInfo extends JPanel {
 
 		final int comNum = 6;
 		int comflag = 0;
-		String[] comurl = { "네이버2.png", "카카오2.jpg", "마소.png", "애플.png", "구글.png", "IBM.png" };
+		String[] comurl = { "네이버2.png", "카카오2.jpg", "마소.png", "애플.png",  "IBM.png","구글.png" };
 
 		ImageIcon[] comImg = new ImageIcon[comNum];
 

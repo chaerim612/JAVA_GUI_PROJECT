@@ -52,7 +52,7 @@ public class FrameReserve extends JPanel {
 		// 상단에 JPanel(영화 포스터, 영화 제목, 시간대 선택)
 		final int busNum = 6;
 		int busflag = 0;
-		String[] busurl = { "라라랜드.png", "말할수없는비밀.jpg", "인사이드아웃.png", "겨울왕국.png", "당신거기있어줄래요.png", "스파이더맨.png" };
+		String[] busurl = { "네이버.png", "카카오.png", "마소.png", "애플.png",  "IBM.png", "구글.png"};
 
 		ImageIcon[] busImg = new ImageIcon[busNum];
 
@@ -75,6 +75,7 @@ public class FrameReserve extends JPanel {
 
 		JLabel img = new JLabel(busImg[busflag]);
 		img.setBounds(50, 15, 175, 248);
+		top.add(img);
 
 		JLabel name = new JLabel(b.getBusName());
 		name.setFont(new Font("나눔고딕코딩", Font.BOLD, 32));
