@@ -17,6 +17,19 @@ import busVO.MyBus;
 public class FrameDate extends JPanel {
 	static String Month;
 	static String day;
+	static String date;
+	
+	public static String getDate() {
+		return date;
+	}
+
+	public static void setDate(String day,String Month) {
+		date =Month+" "+day;
+	}
+
+	MyBus m = new MyBus();
+	
+	//날짜 버튼
 	JButton Hbtn1 = new JButton();
 	JButton Hbtn2 = new JButton();
 	JButton Hbtn3 = new JButton();
@@ -35,8 +48,9 @@ public class FrameDate extends JPanel {
 	JButton Hbtn16 = new JButton();
 	JButton Hbtn17 = new JButton();
 	JButton Hbtn18 = new JButton();
-
-	public FrameDate() {
+	
+	//날짜 설정
+	public FrameDate(Bus b) {
 		setBackground(new Color(0xFFD700));
 		setLayout(null);
 		setSize(600, 800);
@@ -85,6 +99,8 @@ public class FrameDate extends JPanel {
 		top.add(sep);
 		top.add(oct);
 		top.add(nov);
+		
+		//9월 버튼
 		sep.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -96,6 +112,8 @@ public class FrameDate extends JPanel {
 
 			}
 		});
+		
+		//10월 버튼
 		oct.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -105,6 +123,8 @@ public class FrameDate extends JPanel {
 				center2.setVisible(true);
 			}
 		});
+		
+		//11월 버튼
 		nov.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -114,7 +134,8 @@ public class FrameDate extends JPanel {
 				center3.setVisible(true);
 			}
 		});
-
+		
+		//버튼 레이아웃
 		Hbtn1.setSize(160, 200);
 		Hbtn1.setLocation(30, 50);
 		Hbtn1.setText("3일");
@@ -187,131 +208,203 @@ public class FrameDate extends JPanel {
 		Hbtn18.setLocation(400, 330);
 		Hbtn18.setText("30일");
 		Hbtn18.setBackground(new Color(0xFFD700));
+		
+		//버튼 이벤트
 		Hbtn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("3일");
-				FrameBase.getInstance(new FrameReserve(null));
-
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
 			}
 		});
 		Hbtn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("8일");
-				FrameBase.getInstance(new FrameMyPage());
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
 			}
 		});
 		Hbtn3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("13일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				
+				//m.setDate(date);
 			}
 		});
 		Hbtn4.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("18일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn5.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("23일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn6.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("28일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn7.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("1일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn8.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("6일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn9.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("12일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn10.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("19일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn11.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("23일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn12.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("27일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn13.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("4일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn14.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("10일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn15.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("16일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn16.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("22일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn17.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("25일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		Hbtn18.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				setday("30일");
-				FrameBase.getInstance(new FrameReserve(null));
+				setDate(getday(),getMonth());
+				b.setBusDate(getDate());
+				
+				FrameBase.getInstance(new FrameReserve(b));
+				//m.setDate(date);
 			}
 		});
 		center1.add(Hbtn1);
@@ -332,13 +425,16 @@ public class FrameDate extends JPanel {
 		center3.add(Hbtn16);
 		center3.add(Hbtn17);
 		center3.add(Hbtn18);
+		
 		JButton check = new JButton("확인");
 		JButton invisible = new JButton("닫기");
 		JButton back = new JButton("뒤로");
+		
+		//하단 버튼
 		back.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				FrameBase.getInstance(new FrameMyPage());
+				FrameBase.getInstance(new FrameBusSelect());
 			}
 		});
 		bottom.add(back);
@@ -386,7 +482,7 @@ public class FrameDate extends JPanel {
 
 	/*
 	 * public static void main(String[] args) { FrameBase.getInstance(new
-	 * FrameDate()); //FrameDate fd = new FrameDate(); }
+	 * FrameDate(null, null)); //FrameDate fd = new FrameDate(); }
 	 */
 
 }

@@ -21,7 +21,7 @@ import busVO.MyBus;
 
 public class FrameMyPage extends JPanel {
 	ArrayList<Integer> al = null;
-	public FrameMyPage(MyBus m) {
+	public FrameMyPage() {
 		String startPoint="Soldesk";
 		
 		setBackground(new Color(0xFFD700)); 
@@ -65,7 +65,10 @@ public class FrameMyPage extends JPanel {
 		int bNum = (int) (Math.random() * 9)+1;
 		//예매내역 출력 >> txt박스 크기 조정중...ㅠㅠ
 		//RandomTest r=new RandomTest();
-		TextArea myPage = new TextArea(m.getBusName()+"/"+bNum);
+		FrameDate date=new FrameDate();
+		FrameBusSelect sel=new FrameBusSelect();
+		TextArea myPage = new TextArea(date.getMonth()+"/"+bNum+"/"+sel.getBusname()
+		);
 		myPage.setBounds(25, 40, 520, 600);
 		myPage.setBackground(Color.WHITE);
 		myPage.setFont(new Font(Font.DIALOG, Font.BOLD, 20));
