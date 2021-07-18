@@ -10,17 +10,14 @@ public class MyBus {
 			int busPrice;
 			String goal;//목적지(+예매내역 확인
 
+			public MyBus(String goal,String busTime,String seatNum) {
+				this.busTime=busTime;
+				this.seatNum=seatNum;
+				this.goal=goal;
+			}
+			
 			public MyBus() {
-			}
-			
-			
-			public MyBus(int bookingNum) {
-				this.bookingNum = bookingNum;
-			}
-			
-			public MyBus(String date, String busTime) {
-				this.date = date;
-				this.busTime = busTime;
+				// TODO Auto-generated constructor stub
 			}
 
 			public MyBus(String seatNum) {

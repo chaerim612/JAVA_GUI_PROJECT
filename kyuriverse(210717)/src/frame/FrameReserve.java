@@ -19,8 +19,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import busVO.BookDAO;
 import busVO.Bus;
-import busVO.BusDAO;
 import busVO.MyBus;
 
 public class FrameReserve extends JPanel {
@@ -114,13 +114,13 @@ public class FrameReserve extends JPanel {
 
 		for (int i = 0; i < 5; i++) {
 
-			if (i == 1) {
+			if (i==1) {
 				seatAl = "B";
-			} else if (i == 2) {
+			} else if (i==2) {
 				seatAl = "C";
-			} else if (i == 3) {
+			} else if (i==3) {
 				seatAl = "D";
-			} else if (i == 4) {
+			} else if (i==4) {
 				seatAl = "E";
 			}
 
@@ -238,7 +238,7 @@ public class FrameReserve extends JPanel {
 					}
 				}
 
-				BusDAO setSeat = new BusDAO();
+				BookDAO setSeat = new BookDAO();
 				for (int j = 0; j < seatNum; j++) {
 					if (setSeat.dupSeat(b.getBusName(), e.getItem().toString(), seatChoice[j].getText())) {
 

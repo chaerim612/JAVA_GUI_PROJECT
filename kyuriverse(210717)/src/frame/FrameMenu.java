@@ -81,7 +81,7 @@ public class FrameMenu extends JPanel{
 		btnSol.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				FrameBase.getInstance(new FrameStartingPoint());
+				FrameBase.getInstance(new FrameDriver());
 			}
 		});
    

@@ -16,7 +16,6 @@ import javax.swing.JPanel;
 
 import busVO.BookDAO;
 import busVO.Bus;
-import busVO.BusDAO;
 import busVO.MyBus;
 
 public class FrameBusConfirm extends JPanel {
@@ -76,6 +75,7 @@ public class FrameBusConfirm extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent a) {
 				// 결제를 마치고 마이페이지로 이동
+				new BookDAO().addReserveInfo(m);
 				FrameBase.getInstance(new FrameMyPage(b,m));
 			}
 		});
