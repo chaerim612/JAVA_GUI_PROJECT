@@ -12,6 +12,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -20,6 +21,7 @@ import javax.swing.JPanel;
 import busVO.BookDAO;
 import busVO.Bus;
 import busVO.MyBus;
+import jdk.javadoc.internal.doclets.toolkit.util.IndexItem;
 
 public class FrameMyPage extends JPanel {
 	
@@ -54,12 +56,28 @@ public class FrameMyPage extends JPanel {
 		JLabel name = new JLabel("예매 내역");
 		name.setFont(new Font("나눔고딕코딩", Font.BOLD, 32));
 		name.setBounds(260, 35, 300, 175);
+		top.add(name);
 		/*
 		//grid 2,1
 		 */
-		Choice choice = new Choice();
-		top.add(name);
-		//top.add(choice);
+		
+	
+		 Choice resNum = new Choice(); top.add(resNum);
+		 
+			/*
+			 * BookDAO bd=new BookDAO(); String[] slot= new String[10];
+			 * 
+			 * for(int i = 0; i < slot.length; i++) {
+			 * slot[i]=(IndexItem.i)bd.searchBNum(m.getBookingNum());
+			 * 
+			 * }
+			 * 
+			 * for(int i=0;i<slot.length;i++) { resNum.add(slot[i]);
+			 * 
+			 * }
+			 */
+		
+		
 		add(top);
 		
 		m.setBusTime(b.getTime());

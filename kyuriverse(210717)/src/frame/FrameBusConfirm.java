@@ -20,8 +20,6 @@ import busVO.MyBus;
 
 public class FrameBusConfirm extends JPanel {
 	
-	BookDAO bd=new BookDAO();
-	
 	public FrameBusConfirm(Bus b, MyBus m) {
 		// JPanel 구조
 		setBackground(new Color(0xFFD700));
@@ -29,9 +27,17 @@ public class FrameBusConfirm extends JPanel {
 		setSize(600, 800);
 		
 		//예매번호 랜덤지정
-		m.setBookingNum((int)(Math.random()*9+1));
-		m.toString();
-
+		int n = (int)(Math.random()*9+1);
+		String str = Integer.toString(n);
+		m.setBookingNum(str);
+		
+		//예매번호 중복 확인
+		if(m.getBookingNum().equals(str)) {
+			n = (int)(Math.random()*9+1);
+			str = Integer.toString(n);
+			m.setBookingNum(str);
+		} 		
+		
 		// 예매 정보 확인 창
 		TextArea busInfo = new TextArea(
 				"◎ 예 매 번 호 : " + m.getBookingNum() + "\n\n" 

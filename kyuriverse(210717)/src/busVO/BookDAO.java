@@ -16,7 +16,7 @@ public class BookDAO {
 	
 	//예매 내역에 방금 예애한 정보를 등록
 	public void addReserveInfo(MyBus e) {
-		reserveList.add(new MyBus(e.getGoal(),e.getBusTime(),e.getSeatNum()));
+		reserveList.add(new MyBus(e.getGoal(),e.getBusTime(),e.getSeatNum(),e.getBookingNum()));
 	}
 	
 	//이미 예애된 정보인지 검색
@@ -29,6 +29,18 @@ public class BookDAO {
 			}
 		}
 		return false;
+	}
+	
+	public String searchBNum(String num) {
+		for (int i =0;  i < reserveList.size(); i++) {
+
+			if (reserveList.get(i).getBookingNum().equals(num)) {
+
+				return reserveList.get(i).getBookingNum();
+
+			}
+		}
+		return null;
 	}
 	
 }

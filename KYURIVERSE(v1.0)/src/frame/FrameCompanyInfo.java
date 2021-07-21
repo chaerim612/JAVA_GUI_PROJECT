@@ -31,13 +31,14 @@ public class FrameCompanyInfo extends JPanel {
 
 		// JPanel 구조
 		JPanel pane = new JPanel();
-		pane.setBackground(new Color(250, 244, 192));
+		pane.setBackground(Color.black);
 		pane.setLayout(null);
 		pane.setSize(400, 600);
 
 		final int comNum = 6;
 		int comflag = 0;
-		String[] comurl = { "네이버2.png", "카카오2.jpg", "마소.png", "애플.png",  "IBM.png","구글.png" };
+		String[] comurl = { "네이버2.png", "카카오2.png","마소2.png",
+									"애플2.png",  "IBM2.png","구글2.png" };
 
 		ImageIcon[] comImg = new ImageIcon[comNum];
 
@@ -67,13 +68,15 @@ public class FrameCompanyInfo extends JPanel {
 			// 목적지 이름
 			JLabel cName = new JLabel(b.getBusName());
 			cName.setBounds(170, 50, 220, 50);
-			cName.setFont(new Font("나눔고딕코딩", Font.BOLD, 30));
+			cName.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
+			cName.setForeground(Color.white);
 			pane.add(cName);
 
 			// 목적지 정보1. 연봉
 			JLabel cAdd = new JLabel("평균 연봉 : " + b.getPrice() + "만원");
 			cAdd.setBounds(170, 100, 220, 50);
-			cAdd.setFont(new Font("나눔고딕코딩", Font.ITALIC, 16));
+			cAdd.setFont(new Font("배달의민족 주아", Font.ITALIC, 16));
+			cAdd.setForeground(Color.white);
 			pane.add(cAdd);
 
 			// 목적지 정보2. 기타
@@ -82,14 +85,16 @@ public class FrameCompanyInfo extends JPanel {
 			Info.setEditable(false);
 			Info.setSize(400, 270);
 			Info.setLocation(0, 200);
-			Info.setBackground(new Color(0xFFD700));
+			Info.setBackground(Color.white);
 			Info.setFont(new Font(Font.DIALOG, Font.BOLD, 20));
 			pane.add(Info);
 			f.add(pane);
 
 			// 하단 버튼
 			JButton btnExit = new JButton("확인");
-			btnExit.setBounds(145, 480, 90, 50);
+			btnExit.setBounds(145, 490, 90, 50);
+			btnExit.setForeground(Color.black);
+			btnExit.setBackground(Color.white);
 			pane.add(btnExit);
 			
 			btnExit.addActionListener(new ActionListener() {
