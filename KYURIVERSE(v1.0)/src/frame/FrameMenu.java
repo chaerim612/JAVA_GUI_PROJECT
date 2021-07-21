@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import busVO.BookDAO;
@@ -71,7 +70,7 @@ public class FrameMenu extends JPanel{
    	 	);
 		story.setEditable(false);
 		story.setBounds(17, 40, 555, 590);
-		story.setFont(new Font(Font.DIALOG, Font.BOLD, 18));
+		story.setFont(new Font(Font.DIALOG, Font.BOLD, 25));
 		story.setVisible(true);
 		add(story);
    
@@ -88,13 +87,7 @@ public class FrameMenu extends JPanel{
 		btnCheck.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				try {
-					
-					FrameBase.getInstance(new FrameMyPage(b, m));
-				} catch (Exception e2) {
-					// TODO: handle exception
-					JOptionPane.showMessageDialog(null, "예매내역이 없습니다.");
-				}
+				FrameBase.getInstance(new FrameMyPage(b, m));
 			}
 		});
 		
