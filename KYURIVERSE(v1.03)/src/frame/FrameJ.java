@@ -65,11 +65,18 @@ public class FrameJ extends JPanel {
 
 		if (l.getLecName().equals("카카오")) {
 
-			TextArea storyKakao = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n" + "\t\t JAVA 프로그래밍 중급 이상" + "\n"
-					+ "\t\t 관련 분야 자격증 2개 이상" + "\n" + "\t\t 코딩테스트 진행" + "\n" + "\t\t 최종학력 학사 이상" + "\n\n" + "지원코스"
-					+ "\n" + "◆ 영 어 회 화 : " + l.getEng() + "\n" + "◆ 프 로 젝 트 : " + l.getMinPro() + "\n" + "◆ 자  격  증 : "
-					+ l.getLicense() + "\n" + "◆ 코딩테스트 준비 : " + l.getCodingTest() + "\n" + "◆ 학점 관련 안내 : "
-					+ l.getDegree(), 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+			TextArea storyKakao = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n" 
+					+ "\t\t\t      JAVA 프로그래밍 중급 이상" + "\n"
+					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n" 
+					+ "\t\t\t      코딩테스트 진행" + "\n" 
+					+ "\t\t\t      최종학력 학사 이상" + "\n\n" 
+					+ "지원코스"
+					+ "\n\n" 
+					+ "◆ 영 어 회 화 : " + l.getEng() + "\n" 
+					+ "◆ 프 로 젝 트 : " + l.getMinPro() + "\n" 
+					+ "◆ 자  격  증 : "+ l.getLicense() + "\n" 
+					+ "◆ 코딩테스트 준비 : " + l.getCodingTest() + "\n" 
+					+ "◆ 학점 관련 안내 : "+ l.getDegree(), 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 			storyKakao.setEditable(false);
 			storyKakao.setBounds(17, 100, 555, 320);
 			storyKakao.setFont(new Font(Font.DIALOG, Font.BOLD, 25));
@@ -79,10 +86,17 @@ public class FrameJ extends JPanel {
 		}
 
 		if (l.getLecName().equals("IBM")) {
-			TextArea storyIBM = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n" + "\t\t 파이썬 관련 지식 필수" + "\n"
-					+ "\t\t 관련 분야 자격증 2개 이상" + "\n" + "\t\t 최종학력 학사 이상" + "\n" + "\t\t 기타 요구사항" + "\n\n" + "지원코스" + "\n"
-					+ "◆ 영 어 회 화 : " + l.getEng() + "\n" + "◆ 프 로 젝 트 : " + l.getMinPro() + "\n" + "◆ 자  격  증 : "
-					+ l.getLicense() + "\n" + "◆ 학점 관련 안내 : " + l.getDegree() + "\n" + "◆ 기타 제공 강의 : "
+			TextArea storyIBM = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n" 
+					+ "\t\t\t      파이썬 관련 지식 필수" + "\n"
+					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n" 
+					+ "\t\t\t      최종학력 학사 이상" + "\n" 
+					+ "\n\n" + "지원코스" + "\n"
+					+ "◆ 영 어 회 화 : " + l.getEng() + "\n" 
+					+ "◆ 프 로 젝 트 : " + l.getMinPro() + "\n" 
+					+ "◆ 자  격  증 : "
+					+ l.getLicense() + "\n" 
+					+ "◆ 학점 관련 안내 : " + l.getDegree() + "\n" 
+					+ "◆ 기타 제공 강의 : "
 					+ l.getCodingTest(), 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 
 			storyIBM.setEditable(false);

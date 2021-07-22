@@ -1,5 +1,4 @@
-
-	package frame;
+package frame;
 
 import java.awt.BorderLayout;
 import java.awt.Choice;
@@ -288,7 +287,7 @@ public class FrameBusConfirm extends JPanel {
 		     btn.addActionListener(new ActionListener() {
 				          @Override
 			               public void actionPerformed(ActionEvent e) {
-			               FileDialog dialog = new FileDialog(f,"자료등록",FileDialog.SAVE);   
+			               FileDialog dialog = new FileDialog(f,"자료등록",FileDialog.LOAD);   
 			               //이것까지되면 완벽
 			               dialog.setVisible(true);
 			              if(dialog.getDirectory()+dialog.getFile() !=null) {
@@ -317,7 +316,7 @@ public class FrameBusConfirm extends JPanel {
 	      btnBack.setForeground(new Color(255, 255, 255));
 	      btnBack.setSize(183, 87);
 	      btnBack.setLocation(5, 0);
-	      btnBack.setFont(new Font("배달의민족 주아", Font.BOLD, 32));
+	      btnBack.setFont(new Font("배달의민족 주아", Font.BOLD, 22));
 	      
 	      bottomSet.add(btnBack);
 	   
@@ -333,7 +332,7 @@ public class FrameBusConfirm extends JPanel {
 	      btnBuy.setForeground(new Color(255, 255, 255));
 	      btnBuy.setSize(183, 87);
 	      btnBuy.setLocation(391, 0);
-	      btnBuy.setFont(new Font("배달의민족 주아", Font.BOLD, 32));
+	      btnBuy.setFont(new Font("배달의민족 주아", Font.BOLD, 22));
 	     
 	      bottomSet.add(btnBuy);
 
@@ -359,7 +358,7 @@ public class FrameBusConfirm extends JPanel {
 	            	FrameBase.getInstance(new FrameM(b,m,lec));
 	            }  else  if(b.getBusName().equals("애플")) {
 	            	Lecture lec=new LecDAO().searchLec("애플");
-	            	FrameBase.getInstance(new FrameM(b,m,lec));
+	            	FrameBase.getInstance(new FrameJEN(b,m,lec));
 	            }else  if(b.getBusName().equals("마이크로소프트")) {
 	            	Lecture lec=new LecDAO().searchLec("마이크로소프트");
 	            	FrameBase.getInstance(new FrameJEN(b,m,lec));
@@ -387,5 +386,3 @@ public class FrameBusConfirm extends JPanel {
    
    		
 }
-	
-	

@@ -101,7 +101,7 @@ public class FrameReserve extends JPanel {
 		busTime.setSize(270, 200);
 		busTime.setLocation(260, 200);
 
-		JLabel screen = new JLabel("[좌석   예매]");
+		JLabel screen = new JLabel("[수강   신청]");
 		screen.setFont(new Font("배달의민족 주아", Font.PLAIN, 32));
 		screen.setBounds(180, 223, 240, 120);
 		screen.setVisible(false);
@@ -142,7 +142,7 @@ public class FrameReserve extends JPanel {
 		btnBack.setBackground(new Color(26, 28, 32));
 		btnBack.setSize(183, 87);
 		btnBack.setLocation(5, 0);
-		btnBack.setFont(new Font("배달의민족 주아", Font.PLAIN, 26));
+		btnBack.setFont(new Font("배달의민족 주아", Font.PLAIN, 22));
 		bottom.add(btnBack);
 
 		btnBack.addActionListener(new ActionListener() {
@@ -160,7 +160,7 @@ public class FrameReserve extends JPanel {
 		btnHome.setBackground(new Color(26, 28, 32));
 		btnHome.setSize(183, 87);
 		btnHome.setLocation(198, 0);
-		btnHome.setFont(new Font("배달의민족 주아", Font.PLAIN, 28));
+		btnHome.setFont(new Font("배달의민족 주아", Font.PLAIN, 22));
 		bottom.add(btnHome);
 
 		btnHome.addActionListener(new ActionListener() {
@@ -171,14 +171,14 @@ public class FrameReserve extends JPanel {
 			}
 		});
 
-		JButton btnBuy = new JButton("결제하기");
+		JButton btnBuy = new JButton("할인내역선택");
 		
 		
 		btnBuy.setForeground(new Color(255, 255, 255));
 		btnBuy.setBackground(new Color(26, 28, 32));
 		btnBuy.setSize(183, 87);
 		btnBuy.setLocation(391, 0);
-		btnBuy.setFont(new Font("배달의민족 주아", Font.PLAIN, 32));
+		btnBuy.setFont(new Font("배달의민족 주아", Font.PLAIN, 22));
 		bottom.add(btnBuy);
 
 		// 결제하기 버튼 유효성 체크

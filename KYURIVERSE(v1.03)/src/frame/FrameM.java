@@ -66,11 +66,11 @@ public class FrameM extends JPanel{
 			add(bottomSet);
 			
 			TextArea storyNaver = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n"
-					+ "\t\t 리눅스 서버 관련 지식 필수" + "\n"
-					+ "\t\t 정보처리기사 자격 소지자" + "\n"
-					+ "\t\t 최종학력 학사 이상"+"\n"
-					+ "\t\t 기타 요구사항" +"\n\n"
-					+ "지원코스" +"\n"
+					+ "\t\t\t      리눅스 서버 관련 지식 필수" + "\n"
+					+ "\t\t\t      정보처리기사 자격 소지자" + "\n"
+					+ "\t\t\t      최종학력 학사 이상"+"\n"
+					+ "\t\t\t      기타 요구사항" +"\n\n"
+					+ "지원코스" +"\n\n"
 					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
 					+ "◆ 추가 제공되는 강의 : " + lec.getMinPro() + "\n"
 					+ "◆ 자  격  증 : " + lec.getLicense() + "\n"
@@ -80,11 +80,11 @@ public class FrameM extends JPanel{
 					);
 						
 			TextArea storyGoogle = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n"
-					+ "\t\t 협업 경험 2회 이상" + "\n"
-					+ "\t\t 관련 분야 자격증 2개 이상" + "\n"
-					+ "\t\t 코딩테스트 진행"+"\n"
-					+ "\t\t 최종학력 학사 이상"+"\n\n"
-					+ "지원코스" +"\n"
+					+ "\t\t\t      협업 경험 2회 이상" + "\n"
+					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n"
+					+ "\t\t\t      코딩테스트 진행"+"\n"
+					+ "\t\t\t      최종학력 학사 이상"+"\n\n"
+					+ "지원코스" +"\n\n"
 					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
 					+ "◆ 프 로 젝 트 : " + lec.getMinPro() + "\n"
 					+ "◆ 자  격  증 : " + lec.getLicense() + "\n"

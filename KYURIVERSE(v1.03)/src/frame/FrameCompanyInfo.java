@@ -92,10 +92,28 @@ public class FrameCompanyInfo extends JPanel {
 
 			// 하단 버튼
 			JButton btnExit = new JButton("확인");
-			btnExit.setBounds(145, 490, 90, 50);
+			btnExit.setBounds(195, 490, 90, 50);
 			btnExit.setForeground(Color.black);
 			btnExit.setBackground(Color.white);
 			pane.add(btnExit);
+			
+			JButton btnChange = new JButton("다시 선택");
+			btnChange.setBounds(95, 490, 90, 50);
+			btnChange.setForeground(Color.black);
+			btnChange.setBackground(Color.white);
+			pane.add(btnChange);
+			
+			
+			btnChange.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					f.setVisible(false);
+					f.dispose();
+				}
+			});
+			
 			
 			btnExit.addActionListener(new ActionListener() {
 

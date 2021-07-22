@@ -67,11 +67,11 @@ public class FrameJEN extends JPanel{
 			add(bottomSet);
 			
 			TextArea storyMs = new TextArea("필수 지원 자격 : 비즈니스 영어회화 가능" + "\n"
-					+ "\t\t JAVA 프로그래밍 중급 이상" + "\n"
-					+ "\t\t 운전면허 소지자" + "\n"
-					+ "\t\t 최종학력 학사 이상"+"\n"
-					+ "\t\t 기타 요구사항" +"\n\n"
-					+ "지원코스" +"\n"
+					+ "\t\t\t      JAVA 프로그래밍 중급 이상" + "\n"
+					+ "\t\t\t      운전면허 소지자" + "\n"
+					+ "\t\t\t      최종학력 학사 이상"+"\n"
+					+ "\t\t\t      기타 요구사항" +"\n\n"
+					+ "지원코스" +"\n\n"
 					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
 					+ "◆ 프 로 젝 트 : " + lec.getMinPro() + "\n"
 					+ "◆ 자  격  증 : " + lec.getLicense() + "\n"
@@ -81,10 +81,10 @@ public class FrameJEN extends JPanel{
 					);
 						
 			TextArea storyApple = new TextArea("필수 지원 자격 : TOEIC 성적 700점 이상 보유" + "\n"
-					+ "\t\t 안드로이드 프로젝트 경험자" + "\n"
-					+ "\t\t 관련 분야 자격증 2개 이상" + "\n"
-					+ "\t\t 최종학력 학사 이상"+"\n\n"
-					+ "지원코스" +"\n"
+					+ "\t\t\t      안드로이드 프로젝트 경험자" + "\n"
+					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n"
+					+ "\t\t\t      최종학력 학사 이상"+"\n\n"
+					+ "지원코스" +"\n\n"
 					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
 					+ "◆ 프 로 젝 트 : " + lec.getMinPro() + "\n"
 					+ "◆ 자  격  증 : " + lec.getCodingTest() + "\n"

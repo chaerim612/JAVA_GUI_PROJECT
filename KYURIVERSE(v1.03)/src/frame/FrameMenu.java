@@ -31,7 +31,7 @@ public class FrameMenu extends JPanel{
 			bottomSet.setBackground(new Color(244, 244, 244));
 			bottomSet.setLayout(null);
 			
-			JButton btnBook = new JButton("예매하기");
+			JButton btnBook = new JButton("수강신청");
 			btnBook.setBackground(new Color(26, 28, 32));
 			btnBook.setForeground(new Color(255,255,255));
 			btnBook.setSize(183, 87);
@@ -40,7 +40,7 @@ public class FrameMenu extends JPanel{
 			btnBook.setVisible(true);
 			bottomSet.add(btnBook);
 	   
-			JButton btnCheck = new JButton("예매확인");
+			JButton btnCheck = new JButton("신청강의확인");
 			btnCheck.setBackground(new Color(26, 28, 32));
 			btnCheck.setForeground(new Color(255,255,255));
 			
@@ -50,7 +50,7 @@ public class FrameMenu extends JPanel{
 			bottomSet.add(btnCheck);
 			btnCheck.setVisible(true);
 	   
-			JButton btnSol = new JButton("출발지정보");
+			JButton btnSol = new JButton("취업지원처");
 			btnSol.setBackground(new Color(26, 28, 32));
 			btnSol.setForeground(new Color(255,255,255));
 			
@@ -63,11 +63,12 @@ public class FrameMenu extends JPanel{
 			add(bottomSet);
 
 		TextArea story = new TextArea("                          버스 예매시 주의사항\n\n"+
-				"1.한번 예매한 좌석은 변경과 환불이 어려울수 있습니다.\n\n"+"2.버스기사에게 대들시 소지하신 귤을 뺏길수 있습니다.\n\n"
-				+ "3.본 버스는 휴게소 이용이 불가능합니다.\n\n" +"4.본 버스의 승차비용은 오직 귤로만 결제할수있습니다.\n\n"
-				+"5.버스에서 음주와 흡연적발시 경고없이 추방조치합니다.\n\n"+"6.버스안에서의 과도한 수면은 목적지 도착이 어려워질수 있습니다.\n\n"
-				+ "7.버스에서 기물파손시 솔데스크측에서 배상을 요구할수있습니다.\n\n"+"8.기사님에게 주는 사랑은 목적지 도착이 빨라질수 있습니다.\n\n" 
-				+"9.자세한 사항은 개발팀에게 물어봐도 알려주지 않습니다.",0,0,TextArea.SCROLLBARS_VERTICAL_ONLY
+				"1.신청한 취업 플랜은 변경과 환불이 어려울 수 있습니다.\n\n"+"2.강사 및 매니저에게 폭언과 폭행시 법적조치를 취할수 있습니다.\n\n"
+				+ "3.본 취업플랜은 중도탈출시\n"
+				+ "6개월간 본 플랜에 등록할수없습니다.\n\n" +"4.4.본 취업플랜의 비용은 현금으로만 결제가능합니다\n\n"
+				+"5.건물에서 음주와 흡연적발시 경고없이 추방조치합니다.\n\n"+"10일이상 출석및 지각시 제적처리됩니다.\n\n"
+				+ "7.7.건물안에서 기물파손시 솔데스크측에서 배상을 요구할수있습니다.\n\n"+"8.적극적인 수업태도는 본인의 취업에 큰도움이 됩니다.\n\n" 
+				+"9.자세한 사항은 하단의 고객상담소에 연락바랍니다.",0,0,TextArea.SCROLLBARS_VERTICAL_ONLY
    	 	);
 		story.setEditable(false);
 		story.setBounds(17, 40, 555, 590);
