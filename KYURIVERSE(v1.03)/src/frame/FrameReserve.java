@@ -137,7 +137,9 @@ public class FrameReserve extends JPanel {
 		// 하단의 버튼
 		JButton btnBack = new JButton("뒤로가기");
 
-		btnBack.setBackground(new Color(0xA6A6A6));
+		
+		btnBack.setForeground(new Color(255, 255, 255));
+		btnBack.setBackground(new Color(26, 28, 32));
 		btnBack.setSize(183, 87);
 		btnBack.setLocation(5, 0);
 		btnBack.setFont(new Font("배달의민족 주아", Font.PLAIN, 26));
@@ -153,7 +155,9 @@ public class FrameReserve extends JPanel {
 
 		JButton btnHome = new JButton("처음 화면으로");
 
-		btnHome.setBackground(new Color(0xA6A6A6));
+		
+		btnHome.setForeground(new Color(255, 255, 255));
+		btnHome.setBackground(new Color(26, 28, 32));
 		btnHome.setSize(183, 87);
 		btnHome.setLocation(198, 0);
 		btnHome.setFont(new Font("배달의민족 주아", Font.PLAIN, 28));
@@ -168,8 +172,10 @@ public class FrameReserve extends JPanel {
 		});
 
 		JButton btnBuy = new JButton("결제하기");
-
-		btnBuy.setBackground(new Color(0xA6A6A6));
+		
+		
+		btnBuy.setForeground(new Color(255, 255, 255));
+		btnBuy.setBackground(new Color(26, 28, 32));
 		btnBuy.setSize(183, 87);
 		btnBuy.setLocation(391, 0);
 		btnBuy.setFont(new Font("배달의민족 주아", Font.PLAIN, 32));
