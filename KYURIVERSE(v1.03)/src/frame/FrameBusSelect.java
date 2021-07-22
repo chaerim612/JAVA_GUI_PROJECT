@@ -13,9 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import busVO.Lecture;
-import busVO.LecDAO;
-import busVO.Lecture;
+import busVO.Bus;
+import busVO.CompanyDAO;
 
 public class FrameBusSelect extends JPanel {
 
@@ -167,7 +166,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon1.getText());
 				btnIcon1.setBackground(new Color(153, 153, 153));
 				
-				Lecture naver=new LecDAO().searchLec("네이버");
+				Bus naver=new CompanyDAO().searchCompany("네이버");
 				new FrameCompanyInfo(naver);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -199,7 +198,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon2.getText());
 				btnIcon2.setBackground(new Color(153, 153, 153));
 				
-				Lecture kakao=new LecDAO().searchLec("카카오");
+				Bus kakao=new CompanyDAO().searchCompany("카카오");
 				new FrameCompanyInfo(kakao);
 				
 				if(btnIcon1.isBackgroundSet()) {
@@ -227,7 +226,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon3.getText());
 				btnIcon3.setBackground(new Color(153, 153, 153));
 				
-				Lecture ms=new LecDAO().searchLec("마이크로소프트");
+				Bus ms=new CompanyDAO().searchCompany("마이크로소프트");
 				new FrameCompanyInfo(ms);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -256,7 +255,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon4.getText());
 				btnIcon4.setBackground(new Color(153, 153, 153));
 				
-				Lecture apple=new LecDAO().searchLec("애플");
+				Bus apple=new CompanyDAO().searchCompany("애플");
 				new FrameCompanyInfo(apple);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -285,7 +284,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon5.getText());
 				btnIcon5.setBackground(new Color(153, 153, 153));
 				
-				Lecture IBM=new LecDAO().searchLec("IBM");
+				Bus IBM=new CompanyDAO().searchCompany("IBM");
 				new FrameCompanyInfo(IBM);
 				
 				if(btnIcon2.isBackgroundSet()) {
@@ -314,7 +313,7 @@ public class FrameBusSelect extends JPanel {
 				dest.setText(btnIcon6.getText());
 				btnIcon6.setBackground(new Color(153, 153, 153));
 				
-				Lecture google=new LecDAO().searchLec("구글");
+				Bus google=new CompanyDAO().searchCompany("구글");
 				new FrameCompanyInfo(google);
 				
 				if(btnIcon2.isBackgroundSet()) {

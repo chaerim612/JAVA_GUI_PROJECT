@@ -17,14 +17,12 @@ import javax.swing.JPanel;
 
 import busVO.Bus;
 import busVO.MyBus;
-import busVO.Lecture;
-import busVO.LecDAO;
 
 public class FrameCompanyInfo extends JPanel {
 	MyBus mb = new MyBus();
-	LecDAO LD= new LecDAO();
-	public FrameCompanyInfo(Lecture l) {
-		
+
+	public FrameCompanyInfo(Bus b) {
+
 		// 서브 프레임 구성
 		Frame f = new Frame();
 		f.setSize(400, 600);
@@ -47,17 +45,17 @@ public class FrameCompanyInfo extends JPanel {
 		for (int i = 0; i < comNum; i++) {
 			comImg[i] = new ImageIcon(comurl[i]);
 
-			if (l.getLecName().equals("네이버")) {
+			if (b.getBusName().equals("네이버")) {
 				comflag = 0;
-			} else if (l.getLecName().equals("카카오")) {
+			} else if (b.getBusName().equals("카카오")) {
 				comflag = 1;
-			} else if (l.getLecName().equals("마이크로소프트")) {
+			} else if (b.getBusName().equals("마이크로소프트")) {
 				comflag = 2;
-			} else if (l.getLecName().equals("애플")) {
+			} else if (b.getBusName().equals("애플")) {
 				comflag = 3;
-			} else if (l.getLecName().equals("IBM")) {
+			} else if (b.getBusName().equals("IBM")) {
 				comflag = 4;
-			} else if (l.getLecName().equals("구글")) {
+			} else if (b.getBusName().equals("구글")) {
 				comflag = 5;
 			} // for
 
@@ -68,28 +66,22 @@ public class FrameCompanyInfo extends JPanel {
 			pane.add(img);
 
 			// 목적지 이름
-			JLabel cName = new JLabel(l.getLecName());
+			JLabel cName = new JLabel(b.getBusName());
 			cName.setBounds(170, 50, 220, 50);
 			cName.setFont(new Font("배달의민족 주아", Font.PLAIN, 30));
 			cName.setForeground(Color.white);
 			pane.add(cName);
-			
-	
-			
+
 			// 목적지 정보1. 연봉
-			JLabel cAdd = new JLabel("담당 강사 : "); //강사 이름 들어갈 공간
+			JLabel cAdd = new JLabel("평균 연봉 : " + b.getPrice() + "만원");
 			cAdd.setBounds(170, 100, 220, 50);
 			cAdd.setFont(new Font("배달의민족 주아", Font.ITALIC, 16));
 			cAdd.setForeground(Color.white);
 			pane.add(cAdd);
 
-		
-			
-			
 			// 목적지 정보2. 기타
-			TextArea Info = new TextArea("◎외국어능력 : " + l.getEng() + "\n" + "\n◎개발경험 : " + l.getMinPro() + "\n" +
-			"\n◎자격증 : " + l.getLicense() + "\n" + "\n◎코딩테스트 : " + l.getCodingTest() + "\n" + "\n◎학위 : " + l.getDegree(),
-			0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+			TextArea Info = new TextArea("\n◎소요시간 : " + "\n" + b.getTime() + "\n" + "\n◎회사정보 : " + "\n" + b.getInfo()
+					+ "\n" + "\n◎위치 : " + b.getAddress() + "\n", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 			Info.setEditable(false);
 			Info.setSize(400, 270);
 			Info.setLocation(0, 200);
@@ -112,7 +104,7 @@ public class FrameCompanyInfo extends JPanel {
 					// TODO Auto-generated method stub
 					f.setVisible(false);
 					// mb.setGoal(b.getBusName());
-					//FrameBase.getInstance(new FrameDate(b));
+					FrameBase.getInstance(new FrameDate(b));
 				}
 			});
 
