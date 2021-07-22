@@ -91,11 +91,11 @@ public class FrameJ extends JPanel {
 					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n" 
 					+ "\t\t\t      최종학력 학사 이상" + "\n" 
 					+ "\n\n" + "지원코스" + "\n"
-					+ "◆ 영 어 회 화 : " + l.getEng() + "\n" 
-					+ "◆ 프 로 젝 트 : " + l.getMinPro() + "\n" 
+					+ "◆ 영 어 회 화 : " + l.getEng() + "\n\n" 
+					+ "◆ 프 로 젝 트 : " + l.getMinPro() + "\n\n" 
 					+ "◆ 자  격  증 : "
-					+ l.getLicense() + "\n" 
-					+ "◆ 학점 관련 안내 : " + l.getDegree() + "\n" 
+					+ l.getLicense() + "\n\n" 
+					+ "◆ 학점 관련 안내 : " + l.getDegree() + "\n\n" 
 					+ "◆ 기타 제공 강의 : "
 					+ l.getCodingTest(), 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 
@@ -127,10 +127,17 @@ public class FrameJ extends JPanel {
 		btnSol.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
-				JOptionPane.showMessageDialog(null, "(최규리)강사님의  등록 클래스 이름에 등록되었습니다");
+				 if(b.getBusName().equals("IBM")) {
+		            	Lecture lec=new LecDAO().searchLec("IBM");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 IBM(조진웅 매니저)코스에 등록되었습니다");
+		            } else  if(b.getBusName().equals("카카오")) {
+		            	Lecture lec=new LecDAO().searchLec("카카오");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 카카오(조진웅 매니저)코스에 등록되었습니다");
+		            }
+	      
+				
 				FrameBase.getInstance(new FrameMenu());
-
+				
 			}
 		});
 

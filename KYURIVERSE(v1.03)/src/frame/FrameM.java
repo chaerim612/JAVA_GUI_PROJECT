@@ -71,10 +71,10 @@ public class FrameM extends JPanel{
 					+ "\t\t\t      최종학력 학사 이상"+"\n"
 					+ "\t\t\t      기타 요구사항" +"\n\n"
 					+ "지원코스" +"\n\n"
-					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
-					+ "◆ 추가 제공되는 강의 : " + lec.getMinPro() + "\n"
-					+ "◆ 자  격  증 : " + lec.getLicense() + "\n"
-					+ "◆ 학점 관련 안내 : " + lec.getDegree() + "\n"
+					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n\n"
+					+ "◆ 추가 제공되는 강의 : " + lec.getMinPro() + "\n\n"
+					+ "◆ 자  격  증 : " + lec.getLicense() + "\n\n"
+					+ "◆ 학점 관련 안내 : " + lec.getDegree() + "\n\n"
 					+ "◆ 기타 제공 강의 : " + lec.getCodingTest()
 					,0,0,TextArea.SCROLLBARS_VERTICAL_ONLY
 					);
@@ -140,7 +140,13 @@ public class FrameM extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null,"(최규리) 등록 클래스 이름에 등록되었습니다");
+			     if(b.getBusName().equals("네이버")) {
+		            	Lecture lec=new LecDAO().searchLec("네이버");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 네이버(마동석 매니저)코스에 등록되었습니다");
+		            } else  if(b.getBusName().equals("구글")) {
+		            	Lecture lec=new LecDAO().searchLec("구글");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 구글(마동석 매니저)코스에 등록되었습니다");
+		            }
 				FrameBase.getInstance(new FrameMenu());
 				
 			}

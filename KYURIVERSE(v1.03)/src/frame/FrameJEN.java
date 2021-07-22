@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import busVO.Bus;
+import busVO.LecDAO;
 import busVO.Lecture;
 import busVO.MyBus;
 
@@ -85,9 +86,9 @@ public class FrameJEN extends JPanel{
 					+ "\t\t\t      관련 분야 자격증 2개 이상" + "\n"
 					+ "\t\t\t      최종학력 학사 이상"+"\n\n"
 					+ "지원코스" +"\n\n"
-					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n"
-					+ "◆ 프 로 젝 트 : " + lec.getMinPro() + "\n"
-					+ "◆ 자  격  증 : " + lec.getCodingTest() + "\n"
+					+ "◆ 영 어 회 화 : " + lec.getEng() + "\n\n"
+					+ "◆ 프 로 젝 트 : " + lec.getMinPro() + "\n\n"
+					+ "◆ 자  격  증 : " + lec.getCodingTest() + "\n\n"
 					+ "◆ 학점 관련 안내 : " + lec.getDegree()
 					,0,0,TextArea.SCROLLBARS_VERTICAL_ONLY
 					);
@@ -145,8 +146,13 @@ public class FrameJEN extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null,"(최규리) 등록 클래스 이름에 등록되었습니다");
-				FrameBase.getInstance(new FrameMenu());
+				 if(b.getBusName().equals("애플")) {
+		            	Lecture lec=new LecDAO().searchLec("애플");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 애플(제니 매니저)코스에 등록되었습니다");
+		            } else  if(b.getBusName().equals("마이크로소프트")) {
+		            	Lecture lec=new LecDAO().searchLec("마이크로소프트");
+		            	JOptionPane.showMessageDialog(null,"최규리강사님의 마이크로소프트(제니 매니저)코스에 등록되었습니다");
+		            }
 				
 			}
 		});

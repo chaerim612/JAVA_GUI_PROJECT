@@ -101,7 +101,7 @@ public class FrameReserve extends JPanel {
 		busTime.setSize(270, 200);
 		busTime.setLocation(260, 200);
 
-		JLabel screen = new JLabel("[수강   신청]");
+		JLabel screen = new JLabel("[수   강    신   청]");
 		screen.setFont(new Font("배달의민족 주아", Font.PLAIN, 32));
 		screen.setBounds(180, 223, 240, 120);
 		screen.setVisible(false);
