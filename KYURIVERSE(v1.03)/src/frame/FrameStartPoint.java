@@ -106,7 +106,7 @@ public class FrameStartPoint extends JPanel{
 				frame.setLocation(700,400);
 				frame.setLayout(null);
 				
-				String info = "♥ 버스기사님 정보 확인하기♥";
+				String info = "♥ 강사님 정보 확인하기♥";
 				JLabel Jdriver = new JLabel(info);
 				Jdriver.setSize(500,40);
 				Jdriver.setLocation(140, 10);
@@ -117,7 +117,7 @@ public class FrameStartPoint extends JPanel{
 				jI.setSize(280,280);
 				jI.setLocation(15, 50);
 				
-				String nInfo = "- 기사님 성함 :";
+				String nInfo = "- 강사님 성함 :";
 				JLabel JnInfo = new JLabel(nInfo);
 				JnInfo.setSize(300,70);
 				JnInfo.setLocation(300, 50);
@@ -129,7 +129,7 @@ public class FrameStartPoint extends JPanel{
 				Jname.setLocation(380, 80);
 				Jname.setFont(new Font("배달의민족 주아", Font.PLAIN, 22));
 
-				String career = "- 버스 운전 경력 :";
+				String career = "- 강의 경력 :";
 				JLabel Jcareer = new JLabel(career);
 				Jcareer.setSize(300,70);
 				Jcareer.setLocation(300, 140);

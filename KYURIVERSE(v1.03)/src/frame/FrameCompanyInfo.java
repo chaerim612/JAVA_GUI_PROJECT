@@ -80,7 +80,7 @@ public class FrameCompanyInfo extends JPanel {
 			pane.add(cAdd);
 
 			// 목적지 정보2. 기타
-			TextArea Info = new TextArea("\n◎소요시간 : " + "\n" + b.getTime() + "\n" + "\n◎회사정보 : " + "\n" + b.getInfo()
+			TextArea Info = new TextArea("\n◎준비기간 : " + "\n" + b.getTime() + "\n" + "\n◎회사정보 : " + "\n" + b.getInfo()
 					+ "\n" + "\n◎위치 : " + b.getAddress() + "\n", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 			Info.setEditable(false);
 			Info.setSize(400, 270);
