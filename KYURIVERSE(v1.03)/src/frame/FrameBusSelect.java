@@ -339,6 +339,8 @@ public class FrameBusSelect extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
+				FrameBase.getDispose();
 				FrameBase.getInstance(new FrameBegin());
 			}
 		});

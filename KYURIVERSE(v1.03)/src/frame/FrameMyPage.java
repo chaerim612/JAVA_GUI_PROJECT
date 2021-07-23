@@ -171,21 +171,12 @@ public class FrameMyPage extends JPanel {
    
 		JButton btnExit = new JButton("종료하기");
 		btnExit.setSize(183, 87);
-		btnExit.setLocation(203, 0);
+		btnExit.setLocation(396, 0);
 		btnExit.setFont(new Font("배달의민족 주아", Font.BOLD, 22));
 		btnExit.setForeground(Color.WHITE);
 		btnExit.setBackground(new Color(26, 28, 32));
 		bottomSet.add(btnExit);
 		btnExit.setVisible(true);
-   
-		JButton btnSave = new JButton("저장하기");
-		btnSave.setSize(183, 87);
-		btnSave.setLocation(396, 0);
-		btnSave.setFont(new Font("배달의민족 주아", Font.BOLD, 22));
-		btnSave.setForeground(Color.WHITE);
-		btnSave.setBackground(new Color(26, 28, 32));
-		bottomSet.add(btnSave);
-		btnSave.setVisible(true);
 
 		add(bottomSet);
 		
@@ -194,6 +185,7 @@ public class FrameMyPage extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				FrameBase.getDispose();
 			FrameBase.getInstance(new FrameMenu());
 			}
 		});
@@ -208,32 +200,7 @@ public class FrameMyPage extends JPanel {
 		});
 		
 		//액션 뭐시기여 그거 텍스트파일로 저장!
-		btnSave.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-			
-				File file = new File("CheckMyReservation.txt");
-					try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-						
-						writer.append("-------------------------\n");
-						writer.append("예매 확인서\n");
-					    writer.append("-------------------------\n");
-					    writer.append("예매번호 : " + myBus.getBookingNum()+"\n");
-					    System.out.println(myBus.getBookingNum());
-					    writer.append("-------------------------\n");
-					    System.out.println(myBus.getDate());
-					    writer.append("출발일자 : " + myBus.getDate()+"\n");
-					    writer.append("도착지 : " + bus.getBusName()+"\n");
-					    writer.append("-------------------------\n");
-					    writer.append("버스가격 : " + bus.getBusPrice()+"\n");
-					    
-					    writer.close();
-					} catch (IOException i) {
-					    i.printStackTrace();
-					}
-			}
-		});
+		
 		
 //////////////////////// 센터 텍스트 필드 내용////////////////////////////////
 	}

@@ -149,6 +149,7 @@ public class FrameReserve extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				FrameBase.getDispose();
 				FrameBase.getInstance(new FrameDate(b));
 			}
 		});
@@ -205,7 +206,7 @@ public class FrameReserve extends JPanel {
 				} else {
 					myM.setSeatNum(seatChoice[seatIndex].getText());
 					try {
-						
+						FrameBase.getDispose();
 						FrameBase.getInstance(new FrameBusConfirm(b,myM));
 					} catch (Exception e2) {
 						// TODO: handle exception

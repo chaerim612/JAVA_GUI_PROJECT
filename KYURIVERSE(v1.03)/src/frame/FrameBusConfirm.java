@@ -351,24 +351,32 @@ public class FrameBusConfirm extends JPanel {
 	            
 	            if(b.getBusName().equals("네이버")) {
 	            	Lecture lec=new LecDAO().searchLec("네이버");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameM(b,m,lec));
 	            }
 	            else  if(b.getBusName().equals("구글")) {
 	            	Lecture lec=new LecDAO().searchLec("구글");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameM(b,m,lec));
 	            }  else  if(b.getBusName().equals("애플")) {
 	            	Lecture lec=new LecDAO().searchLec("애플");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameJEN(b,m,lec));
 	            }else  if(b.getBusName().equals("마이크로소프트")) {
 	            	Lecture lec=new LecDAO().searchLec("마이크로소프트");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameJEN(b,m,lec));
 	            }else  if(b.getBusName().equals("IBM")) {
 	            	Lecture lec=new LecDAO().searchLec("IBM");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameJ(b,m,lec));
 	            }else  if(b.getBusName().equals("카카오")) {
 	            	Lecture lec=new LecDAO().searchLec("카카오");
+	            	FrameBase.getDispose();
 	            	FrameBase.getInstance(new FrameJ(b,m,lec));
 	            }
+	            
+	            
 	         }
 	      });
 	      add(bottomSet, BorderLayout.SOUTH);
@@ -378,6 +386,7 @@ public class FrameBusConfirm extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 System.out.println("뒤로가기");
+				 FrameBase.getDispose();
 				 FrameBase.getInstance(new FrameDate(b));
 			}
 	    	  

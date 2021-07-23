@@ -85,7 +85,7 @@ public class FrameMenu extends JPanel{
 		btnBook.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				FrameBase.getDispose();
 				FrameBase.getInstance(new FrameBusSelect());
 			}
 		});
@@ -96,6 +96,8 @@ public class FrameMenu extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
+					FrameBase.getDispose();
+					
 					FrameBase.getInstance(new FrameMyPage(b, m));
 					
 				} catch (Exception e2) {
@@ -107,7 +109,7 @@ public class FrameMenu extends JPanel{
 		btnSol.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				FrameBase.getDispose();
 				FrameBase2.getInstance(new FrameStartPoint());
 				
 			}

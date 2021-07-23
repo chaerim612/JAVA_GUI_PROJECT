@@ -228,6 +228,7 @@ public class FrameStartPoint extends JPanel{
 		btnPrev.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				FrameBase.getDispose();
 				FrameBase.getInstance(new FrameMenu());
 			}
 		});

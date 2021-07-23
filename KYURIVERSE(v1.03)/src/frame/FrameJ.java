@@ -118,7 +118,7 @@ public class FrameJ extends JPanel {
 		btnBook.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
+				FrameBase.getDispose();
 				FrameBase.getInstance(new FrameBusConfirm(b, m));
 
 			}
@@ -135,7 +135,7 @@ public class FrameJ extends JPanel {
 		            	JOptionPane.showMessageDialog(null,"최규리강사님의 카카오(조진웅 매니저)코스에 등록되었습니다");
 		            }
 	      
-				
+				 FrameBase.getDispose();
 				FrameBase.getInstance(new FrameMenu());
 				
 			}

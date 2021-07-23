@@ -125,7 +125,7 @@ public class FrameM extends JPanel{
 		btnBook.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				FrameBase.getDispose();
 				
 				FrameBase.getInstance(new FrameBusConfirm(b, m));
 				
@@ -147,6 +147,7 @@ public class FrameM extends JPanel{
 		            	Lecture lec=new LecDAO().searchLec("구글");
 		            	JOptionPane.showMessageDialog(null,"최규리강사님의 구글(마동석 매니저)코스에 등록되었습니다");
 		            }
+			     FrameBase.getDispose();
 				FrameBase.getInstance(new FrameMenu());
 				
 			}
